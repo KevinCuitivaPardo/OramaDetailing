@@ -1,0 +1,14 @@
+@layer components {
+  .showroom { background: radial-gradient(60% 70% at 72% 55%, #16161a 0%, var(--surface) 72%); }
+  .facts { @apply grid list-none; border-top: 1px solid var(--line); }
+  .facts li { @apply grid gap-1 py-5; border-bottom: 1px solid var(--line); }
+  .facts b { @apply text-[1.3rem]; font-weight: 600; letter-spacing: -.03em; }
+  .facts span { color: var(--muted); }
+
+  .stage { @apply relative w-full min-h-[280px] h-[min(78vw,380px)] md:h-[480px] lg:h-[580px]; -webkit-mask-image: radial-gradient(ellipse 74% 74% at 50% 52%, #000 45%, transparent 100%); mask-image: radial-gradient(ellipse 74% 74% at 50% 52%, #000 45%, transparent 100%); }
+  #car3d { @apply absolute inset-0 w-full h-full block; opacity: 0; transition: opacity 1.4s ease; }
+  .stage.ready #car3d { opacity: 1; }
+  .stage .fallback { @apply hidden absolute inset-0 place-items-center; }
+  .stage.nogl .fallback { @apply grid; }
+  .stage.nogl #car3d { @apply hidden; }
+}

@@ -1,0 +1,25 @@
+/* Punto de entrada de estilos: Tailwind + tokens + base + componentes + secciones */
+@import "tailwindcss";
+@import "@fontsource-variable/geist/wght.css";
+@import "@fontsource/instrument-serif/latin-400.css";
+@import "@fontsource/instrument-serif/latin-400-italic.css";
+@import "@fontsource/instrument-serif/latin-ext-400.css";
+@import "@fontsource/instrument-serif/latin-ext-400-italic.css";
+
+@import "./theme.css";
+@import "./base.css";
+
+@import "./components/buttons.css";
+@import "./components/header.css";
+@import "./components/cards.css";
+@import "./components/forms.css";
+@import "./components/booking.css";
+@import "./components/effects.css";
+
+@import "./sections/hero.css";
+@import "./sections/showroom.css";
+@import "./sections/gallery.css";
+@import "./sections/steps.css";
+@import "./sections/compare.css";
+@import "./sections/location.css";
+@import "./sections/faq.css";

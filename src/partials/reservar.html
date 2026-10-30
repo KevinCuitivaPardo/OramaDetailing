@@ -1,0 +1,88 @@
+<section class="section surface-sand" id="reservar">
+  <div class="container-page">
+    <div class="sec-head rev">
+      <span class="eyebrow">Reservar</span>
+      <h2 class="section-title">Agenda tu <em>cita</em></h2>
+      <p class="lead">Sin cuenta. Menos de 2 minutos.</p>
+    </div>
+
+    <div class="panel rev" id="panel">
+      <div class="progress" id="prog" aria-hidden="true"><i></i><i></i><i></i></div>
+      <div class="plabel"><span id="plabel">Paso 1 de 3 · <b>Servicio</b></span></div>
+
+      <!-- Paso 1: servicio (vehículo + servicio) -->
+      <div class="bstep on" data-s="1">
+        <h3>¿Qué servicio quieres?</h3>
+        <p class="step-sub">Primero tu vehículo, para mostrarte el precio.</p>
+        <div class="opts three" id="optV">
+          <button class="opt" data-v="auto" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M5 11l1.6-4.2A2 2 0 0 1 8.5 5.5h7a2 2 0 0 1 1.9 1.3L19 11c1.1.3 2 1.3 2 2.5V17h-2v1.5a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1V17H8v1.5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V17H3v-3.5C3 12.3 3.9 11.3 5 11z"/></svg><div><strong>Auto</strong><span class="d">Sedán, coupé, hatchback</span></div></button>
+          <button class="opt" data-v="suv" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M4 10l1.3-3.6A2.2 2.2 0 0 1 7.4 5h8.2a2.2 2.2 0 0 1 1.9 1.1L20 10c1.1.3 2 1.2 2 2.4V17h-2v1.5a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1V17H7v1.5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V17H2v-4.6c0-1.2.9-2.1 2-2.4z"/></svg><div><strong>SUV</strong><span class="d">Guagua o crossover</span></div></button>
+          <button class="opt" data-v="pickup" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M2 11.5V16h1.5v1.5a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1V16h11v1.5a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1V16H22v-4a2 2 0 0 0-2-2h-6.2L12 6.2A2 2 0 0 0 10.6 5.7H7.3a2 2 0 0 0-1.9 1.3L4.5 9.5H4a2 2 0 0 0-2 2z"/></svg><div><strong>Pickup</strong><span class="d">Camioneta con batea</span></div></button>
+        </div>
+        <div class="opts mt-6" id="optS" aria-live="polite"></div>
+      </div>
+
+      <!-- Paso 2: fecha y hora (disponibilidad real) -->
+      <div class="bstep" data-s="2">
+        <h3 id="dayTitle">Día y hora</h3>
+        <div class="cal-head"><button class="nav-btn" id="calPrev" aria-label="Mes anterior">‹</button><b id="calTitle"></b><button class="nav-btn" id="calNext" aria-label="Mes siguiente">›</button></div>
+        <div class="cal" id="cal"></div>
+        <p class="note">Solo miércoles a domingo, desde mañana. Los días tachados no tienen disponibilidad.</p>
+        <div id="timesBox" hidden>
+          <div class="times-t" id="timesT"></div>
+          <div class="times" id="times" aria-live="polite"></div>
+          <p class="note" id="timesNote"></p>
+          <div class="soldout" id="soldOut" hidden>
+            <b>No hay disponibilidad para esta fecha.</b>
+            <p>Todos los horarios de ese día están ocupados. Escríbenos por WhatsApp: el dueño revisa si es posible atenderte.</p>
+            <a class="btn btn-outline" id="soldOutWa" target="_blank" rel="noopener">Consultar por WhatsApp</a>
+          </div>
+        </div>
+        <div class="alert" id="slotMsg" hidden role="status"></div>
+      </div>
+
+      <!-- Paso 3: datos del cliente -->
+      <div class="bstep" data-s="3">
+        <h3>Tus datos</h3>
+        <div class="summary" id="sum3"></div>
+        <form id="form" novalidate autocomplete="on">
+          <div class="field"><label for="fn">Nombre completo</label><input id="fn" name="nombre" autocomplete="name" required maxlength="80"><span class="err">Escribe tu nombre y apellido.</span></div>
+          <div class="grid gap-x-3.5 md:grid-cols-2">
+            <div class="field"><label for="ph">Celular</label><input id="ph" name="celular" type="tel" inputmode="tel" autocomplete="tel" placeholder="787-000-0000" required maxlength="16"><span class="err">Escribe un celular de 10 dígitos.</span></div>
+            <div class="field"><label for="em">Correo electrónico</label><input id="em" name="correo" type="email" inputmode="email" autocomplete="email" placeholder="tucorreo@gmail.com" required maxlength="254"><span class="err">Escribe un correo válido.</span></div>
+          </div>
+          <div class="field"><label for="pl">Lugar del servicio</label><input id="pl" name="lugar" autocomplete="street-address" placeholder="Urbanización, calle o pueblo" required maxlength="160"><span class="err">Dinos dónde será el servicio.</span></div>
+          <div class="field"><label for="mm">Marca y modelo <em>(opcional)</em></label><input id="mm" name="modelo" placeholder="Ej. Toyota Corolla" maxlength="60"></div>
+        </form>
+        <p class="note !mt-0">Te enviaremos la confirmación y los enlaces para consultar, cambiar o cancelar tu cita a este correo.</p>
+        <div class="alert" id="bookErr" hidden role="alert"></div>
+        <div class="alert" id="closedMsg" hidden>La agenda está cerrada ahora (11:00 p.m. a 6:00 a.m.). Podrás confirmar tu cita a partir de las 6:00 a.m.</div>
+      </div>
+
+      <!-- Confirmación -->
+      <div class="bstep" data-s="4">
+        <div class="done">
+          <div class="check"><svg viewBox="0 0 48 48"><path d="M10 25l9 9 19-20"/></svg></div>
+          <span class="eyebrow" id="doneEy">¡Cita confirmada!</span>
+          <div class="code" id="bcode">OR-000000</div>
+          <p class="lead mx-auto">Este es tu número de reserva. Guárdalo: lo necesitarás para consultar, cambiar o cancelar tu cita.</p>
+          <div class="summary" id="sum4"></div>
+          <p class="note" id="mailNote"></p>
+          <p class="note" id="spamNote" hidden><strong>¿No ves el correo?</strong> Revisa la carpeta de <strong>spam o correo no deseado</strong> y, si está ahí, márcalo como «No es spam» para que los próximos te lleguen a la bandeja principal.</p>
+          <a class="btn btn-outline w-full max-w-[440px]" id="waSave" target="_blank" rel="noopener">Guardar mi reserva en WhatsApp</a>
+          <p class="mt-3.5"><button class="btn btn-outline btn-sm" id="again">Hacer otra reserva</button></p>
+        </div>
+      </div>
+
+      <div class="bnav" id="bnav">
+        <button class="btn btn-outline btn-plain" id="back" hidden>Atrás</button>
+        <button class="btn btn-red" id="next" disabled>Continuar</button>
+      </div>
+    </div>
+
+    <div class="mt-5 grid max-w-[940px] gap-2.5">
+      <div class="alert rev">Las citas se agendan desde un día antes. Para el mismo día, escríbenos por WhatsApp.</div>
+      <div class="alert rev">La agenda se cierra de 11:00 p.m. a 6:00 a.m.</div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,26 @@
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 min-h-[52px] px-7 cursor-pointer no-underline select-none whitespace-nowrap;
+    border: 1px solid transparent; border-radius: 999px; font-size: .98rem; font-weight: 500; letter-spacing: -.005em;
+    background: var(--ink); color: var(--surface);
+    transition: transform .35s var(--ease), background-color .25s, border-color .25s, box-shadow .35s var(--ease);
+    -webkit-tap-highlight-color: transparent;
+  }
+  .btn::after { content: "→"; display: inline-block; transition: transform .35s var(--ease); }
+  .btn:hover { transform: translateY(-1px); }
+  .btn:hover::after { transform: translateX(4px); }
+  .btn:active { transform: scale(.98); }
+  .btn[disabled] { opacity: .38; cursor: not-allowed; transform: none; box-shadow: none; }
+  .btn[disabled]::after { transform: none; }
+
+  /* Primario: único bloque de color de la interfaz */
+  .btn-red { background: var(--color-orama); color: #fff; box-shadow: 0 10px 24px -12px rgb(196 22 28 / .7); }
+  .btn-red:hover { background: #d81b22; box-shadow: 0 14px 30px -12px rgb(196 22 28 / .8); }
+
+  .btn-outline { background: transparent; color: var(--ink); border-color: color-mix(in srgb, var(--ink) 28%, transparent); }
+  .btn-outline:hover { border-color: var(--ink); background: color-mix(in srgb, var(--ink) 6%, transparent); }
+
+  .btn-sm { @apply min-h-11 px-5 text-[.92rem]; }
+  .btn-sm::after, .btn-plain::after { content: none; }
+  .btn-block { @apply w-full; }
+}

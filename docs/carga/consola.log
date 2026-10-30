@@ -1,0 +1,130 @@
+
+▶ Escenario A
+(node:13288) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+{
+ "solicitudes": 3853,
+ "rps": 42.2,
+ "promedioMs": 5.04,
+ "medianaMs": 4.19,
+ "p95Ms": 10.98,
+ "p99Ms": 15.65,
+ "maxMs": 62.8,
+ "estados": {
+  "200": 3421,
+  "201": 430,
+  "409": 2
+ }
+}
+  consistencia: {"reservas":430,"confirmadas":125,"canceladas":305,"casilleros":614,"casillerosHuerfanos":0,"confirmadasConBloqueIncoherente":0,"solapamientos":0,"codigosDuplicados":0,"clientes":430,"integridadSqlite":"ok","tamanoMB":2.3}
+
+▶ Escenario B
+(node:6804) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+{
+ "solicitudes": 150,
+ "rps": 348.8,
+ "promedioMs": 306.24,
+ "medianaMs": 302.38,
+ "p95Ms": 491.46,
+ "p99Ms": 509.26,
+ "maxMs": 511.5,
+ "estados": {
+  "201": 150
+ }
+}
+  consistencia: {"reservas":161,"confirmadas":161,"canceladas":0,"casilleros":650,"casillerosHuerfanos":0,"confirmadasConBloqueIncoherente":0,"solapamientos":0,"codigosDuplicados":0,"clientes":161,"integridadSqlite":"ok","tamanoMB":0.67}
+
+▶ Escenario C
+(node:20932) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+{
+ "solicitudes": 4223,
+ "rps": 695.6,
+ "promedioMs": 152.56,
+ "medianaMs": 151.41,
+ "p95Ms": 269.33,
+ "p99Ms": 339.25,
+ "maxMs": 401.7,
+ "estados": {
+  "200": 8,
+  "201": 23,
+  "409": 4192
+ }
+}
+  consistencia: {"reservas":23,"confirmadas":23,"canceladas":0,"casilleros":94,"casillerosHuerfanos":0,"confirmadasConBloqueIncoherente":0,"solapamientos":0,"codigosDuplicados":0,"clientes":23,"integridadSqlite":"ok","tamanoMB":0.21}
+
+▶ Escenario D
+(node:22292) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+  10 VU → 1014.5 rps · p95 15.32 ms · errores 0.0 %
+  25 VU → 1033.1 rps · p95 35.54 ms · errores 0.0 %
+  50 VU → 935.3 rps · p95 71.4 ms · errores 0.0 %
+  100 VU → 1014.8 rps · p95 120.59 ms · errores 0.0 %
+  200 VU → 995.3 rps · p95 229.09 ms · errores 0.0 %
+  400 VU → 998.2 rps · p95 443.81 ms · errores 0.0 %
+  800 VU → 1242 rps · p95 720.98 ms · errores 6.0 %
+  1000 VU → 1290.1 rps · p95 895.77 ms · errores 7.1 %
+[
+ {
+  "vu": 10,
+  "rps": 1014.5,
+  "p95": 15.32
+ },
+ {
+  "vu": 25,
+  "rps": 1033.1,
+  "p95": 35.54
+ },
+ {
+  "vu": 50,
+  "rps": 935.3,
+  "p95": 71.4
+ },
+ {
+  "vu": 100,
+  "rps": 1014.8,
+  "p95": 120.59
+ },
+ {
+  "vu": 200,
+  "rps": 995.3,
+  "p95": 229.09
+ },
+ {
+  "vu": 400,
+  "rps": 998.2,
+  "p95": 443.81
+ },
+ {
+  "vu": 800,
+  "rps": 1242,
+  "p95": 720.98
+ },
+ {
+  "vu": 1000,
+  "rps": 1290.1,
+  "p95": 895.77
+ }
+]
+  consistencia: {"reservas":12294,"confirmadas":70,"canceladas":12224,"casilleros":336,"casillerosHuerfanos":0,"confirmadasConBloqueIncoherente":0,"solapamientos":0,"codigosDuplicados":0,"clientes":12294,"integridadSqlite":"ok","tamanoMB":69.24}
+
+▶ Escenario E
+(node:19472) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+{
+ "solicitudes": 79873,
+ "rps": 132.9,
+ "promedioMs": 5.99,
+ "medianaMs": 4.53,
+ "p95Ms": 14.98,
+ "p99Ms": 31.43,
+ "maxMs": 96.5,
+ "estados": {
+  "200": 66551,
+  "201": 13291,
+  "409": 31
+ }
+}
+  consistencia: {"reservas":13291,"confirmadas":0,"canceladas":13291,"casilleros":0,"casillerosHuerfanos":0,"confirmadasConBloqueIncoherente":0,"solapamientos":0,"codigosDuplicados":0,"clientes":13291,"integridadSqlite":"ok","tamanoMB":76.74}
+FIN

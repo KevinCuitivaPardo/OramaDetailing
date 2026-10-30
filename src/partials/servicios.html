@@ -1,0 +1,65 @@
+<section class="section surface-light" id="servicios">
+  <div class="container-page">
+    <div class="sec-head rev">
+      <span class="eyebrow">Servicios y precios</span>
+      <h2 class="section-title">Elige tu <em>servicio</em></h2>
+      <p class="lead">Escoge tu tipo de vehículo y mira el precio al instante.</p>
+    </div>
+
+    <div class="tabs rev" role="tablist" aria-label="Tipo de vehículo" id="vtabs">
+      <button class="tab" role="tab" aria-selected="true" data-v="auto"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 11l1.6-4.2A2 2 0 0 1 8.5 5.5h7a2 2 0 0 1 1.9 1.3L19 11c1.100.3 2 1.300 2 2.500V17h-2v1.500a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1V17H8v1.500a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V17H3v-3.500C3 12.300 3.900 11.300 5 11zm2.200 0h9.600l-1.100-3H8.300z"/></svg>Auto</button>
+      <button class="tab" role="tab" aria-selected="false" data-v="suv"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10l1.300-3.600A2.200 2.200 0 0 1 7.400 5h8.200a2.200 2.200 0 0 1 1.900 1.100L20 10c1.100.3 2 1.200 2 2.400V17h-2v1.500a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1V17H7v1.500a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V17H2v-4.600c0-1.200.9-2.100 2-2.400zm2.500-.2h11l-1-2.800H7.500z"/></svg>SUV</button>
+      <button class="tab" role="tab" aria-selected="false" data-v="pickup"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 11.500V16h1.500v1.500a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1V16h11v1.500a1 1 0 0 0 1 1h1a1 1 0 0 0 1-1V16H22v-4a2 2 0 0 0-2-2h-6.200L12 6.200A2 2 0 0 0 10.600 5.700H7.300a2 2 0 0 0-1.900 1.300L4.500 9.500H4a2 2 0 0 0-2 2z"/></svg>Pickup</button>
+    </div>
+
+    <div class="grid gap-6 md:grid-cols-2 [perspective:1200px]">
+      <article class="card tilt rev" data-svc="1">
+        <div class="card-media"><img data-img alt="Vehículo después del Servicio Exterior" width="1206" height="1459" loading="lazy"></div>
+        <div class="card-body">
+        <span class="num">Servicio #1 · Exterior</span>
+        <h3>Exterior</h3>
+        <span class="dur"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Dura 1 h 30 min</span>
+        <ul class="checks">
+          <li><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg>Lavado exterior</li>
+          <li><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg>Brillo de goma</li>
+          <li><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg>Cera líquida</li>
+          <li><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg>Flushing</li>
+          <li><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg>Entre puertas</li>
+        </ul>
+        <div class="price"><small data-from>desde</small><span class="amt" data-amt>$25</span></div>
+        <button class="btn btn-red btn-block" data-pick="1">Reservar Exterior</button>
+        </div>
+      </article>
+
+      <article class="card hot tilt rev [--d:.12s]" data-svc="2">
+        <span class="badge">Más completo</span>
+        <div class="card-media"><img data-img alt="Interior después del Servicio Completo" width="1129" height="1460" loading="lazy"></div>
+        <div class="card-body">
+        <span class="num">Servicio #2 · Completo</span>
+        <h3>Completo</h3>
+        <span class="dur"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Dura 2 h 30 min</span>
+        <ul class="checks">
+          <li><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg>Lavado exterior</li>
+          <li><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg>Limpieza interior</li>
+          <li><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg>Brillo de goma</li>
+          <li><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg>Entre puertas</li>
+          <li><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg>Flushing</li>
+          <li><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg>Cera líquida</li>
+          <li><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg>Cristales por dentro y por fuera</li>
+        </ul>
+        <div class="price"><small data-from>desde</small><span class="amt" data-amt>$35</span></div>
+        <button class="btn btn-red btn-block" data-pick="2">Reservar Completo</button>
+        </div>
+      </article>
+    </div>
+    
+    <div class="price-table rev" role="region" aria-label="Tabla de precios">
+      <h3>Todos los precios, de un vistazo</h3>
+      <table>
+        <thead><tr><th scope="col">Vehículo</th><th scope="col">Servicio #1 · Exterior<small>1 h 30 min</small></th><th scope="col">Servicio #2 · Completo<small>2 h 30 min</small></th></tr></thead>
+        <tbody id="priceBody"></tbody>
+      </table>
+      <p class="note">Todos los precios son “desde”: el valor final depende del tamaño y la condición del vehículo, y te lo confirmamos antes de empezar.</p>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,19 @@
+@layer components {
+  /* Aparición suave al hacer scroll */
+  .rev { opacity: 0; transform: translateY(28px); filter: blur(6px); transition: opacity 1s var(--ease), transform 1s var(--ease), filter 1s var(--ease); transition-delay: var(--d, 0s); }
+  .rev.in { opacity: 1; transform: none; filter: none; }
+  [data-par] { will-change: transform; }
+  #fx { @apply fixed inset-0 w-full h-full pointer-events-none z-40; }
+
+  /* Barra de progreso de lectura */
+  .read-progress { @apply fixed left-0 right-0 top-0 z-[60] h-[2px] origin-left pointer-events-none; background: var(--color-orama); transform: scaleX(0); }
+
+  .fab { @apply fixed z-[60] grid place-items-center w-14 h-14 rounded-full!; right: max(16px, env(safe-area-inset-right)); bottom: max(16px, env(safe-area-inset-bottom)); background: #0f0f11; color: #fff; box-shadow: var(--shadow-md); border: 1px solid rgb(245 244 241 / .16); transition: transform .35s var(--ease), background-color .25s; }
+  .fab:hover { transform: translateY(-3px) scale(1.04); background: var(--color-orama); }
+  .fab svg { @apply w-6 h-6 fill-white; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; scroll-behavior: auto !important; }
+  .rev { opacity: 1; transform: none; filter: none; }
+  #fx { display: none; }
+}

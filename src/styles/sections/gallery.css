@@ -1,0 +1,20 @@
+@layer components {
+  .gallery { @apply columns-2 gap-3 md:columns-3 md:gap-5 lg:columns-4; }
+  .g-item { @apply relative block w-full mb-3 overflow-hidden cursor-pointer p-0 md:mb-5 break-inside-avoid; background: var(--card); border: 0; border-radius: var(--r-lg); }
+  .g-item img { @apply block w-full h-auto; transition: transform 1.4s var(--ease); }
+  .g-item:hover img { transform: scale(1.06); }
+  .g-item span { @apply absolute inset-x-0 bottom-0 px-5 pb-4 pt-14 text-left text-[.8rem] uppercase text-white translate-y-1; letter-spacing: .14em; font-weight: 500; opacity: 0; background: linear-gradient(transparent, rgb(0 0 0 / .7)); transition: opacity .4s, transform .5s var(--ease); }
+  .g-item:hover span, .g-item:focus-visible span { opacity: 1; transform: none; }
+
+  .lightbox { @apply fixed inset-0 m-0 w-full h-full max-w-none max-h-none border-0 p-0 text-white; background: rgb(9 9 10 / .96); }
+  .lightbox:not([open]) { display: none; }
+  .lightbox[open] { @apply grid place-items-center; animation: lb-in .35s var(--ease); }
+  @keyframes lb-in { from { opacity: 0; } to { opacity: 1; } }
+  .lightbox img { @apply max-w-[92vw] max-h-[82vh] object-contain; border-radius: var(--r-md); }
+  .lb-close, .lb-nav { @apply absolute z-10 grid place-items-center w-12 h-12 text-3xl leading-none cursor-pointer rounded-full! text-white; background: rgb(245 244 241 / .1); border: 0; transition: background-color .2s, transform .25s var(--ease); }
+  .lb-close { @apply right-4 top-4; }
+  .lb-nav { @apply top-1/2 -mt-6; }
+  .lb-prev { @apply left-3 md:left-8; } .lb-next { @apply right-3 md:right-8; }
+  .lb-close:hover, .lb-nav:hover { background: rgb(245 244 241 / .22); transform: scale(1.06); }
+  .lb-cap { @apply absolute bottom-6 inset-x-0 text-center text-[.8rem] uppercase; letter-spacing: .14em; color: var(--color-ash); }
+}

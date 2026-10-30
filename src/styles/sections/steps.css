@@ -1,0 +1,18 @@
+@layer components {
+  /* Línea de tiempo editorial: sin tarjetas, solo numerales grandes y filetes */
+  .steps { @apply grid gap-x-10 gap-y-14 md:grid-cols-2 lg:grid-cols-4; counter-reset: s; }
+  .step { @apply relative pt-8; counter-increment: s; border-top: 1px solid var(--line); }
+  .step::before { content: ""; @apply absolute left-0 -top-px h-px w-0; background: var(--color-orama); transition: width 1.2s var(--ease) .2s; }
+  .step.in::before { width: 64px; }
+  .step::after { content: "0" counter(s); @apply block order-first; font-family: var(--font-serif); font-style: italic; font-size: 5rem; line-height: 1; color: color-mix(in srgb, var(--ink) 14%, transparent); letter-spacing: -.02em; position: absolute; top: 28px; right: 0; }
+  .step h3 { @apply mb-3 text-[1.55rem]; line-height: 1.1; max-width: 14ch; }
+  .step p { color: var(--muted); max-width: 30ch; }
+  .ico { @apply grid place-items-center w-14 h-14 mb-8 rounded-full!; background: var(--card); box-shadow: var(--shadow-sm); border: 1px solid var(--line); }
+  .ico svg { @apply w-7 h-7 fill-none; stroke: var(--ink); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+  .a-bounce { animation: bounce 3s ease-in-out infinite; }
+  .a-pulse { animation: pulse 2.6s ease-in-out infinite; transform-origin: center; transform-box: fill-box; }
+  .a-draw path.d, .a-draw polyline { stroke-dasharray: 60; animation: draw 3s ease-in-out infinite; }
+  @keyframes bounce { 50% { transform: translateY(-4px); } }
+  @keyframes pulse { 50% { transform: scale(1.1); } }
+  @keyframes draw { 0% { stroke-dashoffset: 60; } 50%, 100% { stroke-dashoffset: 0; } }
+}

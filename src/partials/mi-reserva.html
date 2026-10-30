@@ -1,0 +1,19 @@
+<section class="section surface-light !py-20 md:!py-28" id="mi-reserva">
+  <div class="container-page">
+    <div class="lookup-card rev">
+      <div>
+        <span class="eyebrow">Mi reserva</span>
+        <h2 class="section-title">Busca tu <em>cita</em></h2>
+        <p class="lead">Cambia o cancela tu cita hasta 1 hora antes. Por tu seguridad te enviamos un correo para confirmar cada cambio o cancelación. Después de ese plazo, escríbenos por WhatsApp.</p>
+      </div>
+      <div>
+        <form id="lookup" novalidate>
+          <div class="field"><label for="lc">Número de reserva</label><input id="lc" placeholder="OR-7K3P" autocapitalize="characters" maxlength="10" required><span class="err">Escribe tu número de reserva.</span></div>
+          <div class="field"><label for="lp">Celular</label><input id="lp" type="tel" inputmode="tel" placeholder="787-000-0000" required maxlength="16"><span class="err">Escribe tu celular.</span></div>
+          <button class="btn btn-red btn-block" type="submit">Buscar mi cita</button>
+        </form>
+        <div class="found" id="found" aria-live="polite"></div>
+      </div>
+    </div>
+  </div>
+</section>

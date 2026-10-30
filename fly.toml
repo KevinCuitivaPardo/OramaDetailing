@@ -1,0 +1,36 @@
+# Despliegue en Fly.io (ver docs/DESPLIEGUE.md). Las credenciales NO van aquí: se cargan con `fly secrets set`.
+app = "orama-detailing"          # cambia por un nombre único si ya existe
+primary_region = "mia"           # Miami: la más cercana a Puerto Rico
+
+[build]
+
+[env]
+  NODE_ENV = "production"
+  PORT = "8080"
+  HOST = "0.0.0.0"
+  DATABASE_PATH = "/data/orama.db"
+  BACKUP_DIR = "/data/backups"
+  TRUST_PROXY = "1"
+  # PUBLIC_BASE_URL se define con: fly secrets set PUBLIC_BASE_URL=https://tu-dominio
+
+[mounts]
+  source = "orama_data"          # fly volumes create orama_data --size 1 --region mia
+  destination = "/data"
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+  auto_stop_machines = "off"     # SIEMPRE encendida: las tareas programadas viven en el proceso
+  auto_start_machines = true
+  min_machines_running = 1       # UNA sola máquina: SQLite no se comparte entre máquinas
+
+  [[http_service.checks]]
+    grace_period = "20s"
+    interval = "30s"
+    method = "GET"
+    path = "/api/salud"
+    timeout = "5s"
+
+[[vm]]
+  size = "shared-cpu-1x"
+  memory = "512mb"

@@ -1,0 +1,71 @@
+@layer components {
+  .panel { @apply max-w-[940px] p-5 pb-7 md:p-12; background: var(--card); border: 1px solid var(--line); border-radius: var(--r-xl); box-shadow: var(--shadow-md); }
+  .progress { @apply flex gap-2 mb-3; }
+  .progress i { @apply relative flex-1 h-1 overflow-hidden; background: var(--line); border-radius: 99px; }
+  .progress i::after { content: ""; @apply absolute inset-0 origin-left; background: var(--color-orama); transform: scaleX(0); transition: transform .6s var(--ease); }
+  .progress i.on::after { transform: scaleX(1); }
+  .plabel { @apply flex justify-between mb-8 text-[.92rem]; color: var(--muted); }
+  .plabel b { color: var(--ink); font-weight: 500; }
+
+  .bstep { @apply hidden; }
+  .bstep.on { @apply block; animation: step-in .55s var(--ease); }
+  .bstep h3 { @apply mb-6 text-[clamp(1.8rem,3.4vw,2.4rem)]; line-height: 1.05; }
+  @keyframes step-in { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
+
+  .opts { @apply grid gap-3; }
+  .opt { @apply flex items-center gap-4 w-full min-h-[84px] px-5 py-4 text-left cursor-pointer; background: var(--card); border: 1px solid var(--line); border-radius: var(--r-md); color: var(--ink); transition: border-color .25s, box-shadow .3s var(--ease), transform .3s var(--ease), background-color .25s; }
+  .opt:hover { border-color: color-mix(in srgb, var(--ink) 40%, transparent); transform: translateY(-2px); box-shadow: var(--shadow-sm); }
+  .opt[aria-pressed="true"] { border-color: var(--color-orama); box-shadow: 0 0 0 3px rgb(196 22 28 / .14); background: color-mix(in srgb, var(--color-orama) 4%, var(--card)); }
+  .opt svg { @apply w-11 h-11 shrink-0 fill-current; color: var(--muted); transition: color .25s; }
+  .opt[aria-pressed="true"] svg { color: var(--color-orama); }
+  .opt strong { @apply block text-[1.25rem]; font-weight: 600; letter-spacing: -.02em; line-height: 1.1; }
+  .opt .d { @apply text-[.92rem]; color: var(--muted); }
+  .opt .p { @apply ml-auto whitespace-nowrap text-[1.4rem]; font-weight: 600; letter-spacing: -.03em; }
+  @media (min-width: 48rem) {
+    .opts.three { @apply grid-cols-3; }
+    .opts.three .opt { @apply flex-col items-start justify-between min-h-[170px]; }
+    .opts.three .opt .p { @apply ml-0; }
+  }
+
+  .cal-head { @apply flex items-center justify-between mb-4; }
+  .cal-head b { @apply text-[1.4rem]; font-weight: 600; letter-spacing: -.03em; }
+  .nav-btn { @apply grid place-items-center w-11 h-11 text-xl cursor-pointer rounded-full!; background: var(--card-2); border: 0; color: var(--ink); transition: background-color .2s, transform .25s var(--ease); }
+  .nav-btn:hover:not([disabled]) { transform: scale(1.06); background: color-mix(in srgb, var(--ink) 10%, var(--card-2)); }
+  .nav-btn[disabled] { @apply opacity-30 cursor-not-allowed; }
+  .cal { @apply grid grid-cols-7 gap-1.5; }
+  .cal .dow { @apply py-1 text-center text-[.78rem] uppercase; letter-spacing: .1em; color: var(--muted); }
+  .day { @apply grid place-items-center min-h-11 aspect-square cursor-pointer text-[.98rem] rounded-full!; background: transparent; border: 0; color: var(--ink); font-weight: 500; transition: background-color .2s, color .2s, transform .25s var(--ease); font-variant-numeric: tabular-nums; }
+  .day[disabled] { color: color-mix(in srgb, var(--ink) 22%, transparent); cursor: not-allowed; font-weight: 400; }
+  .day:not([disabled]):hover { background: var(--card-2); transform: scale(1.08); }
+  .day[aria-pressed="true"] { background: var(--color-orama); color: #fff; }
+  .day.empty { visibility: hidden; }
+  .times-t { @apply mt-8 mb-3 text-[1.05rem]; font-weight: 600; letter-spacing: -.02em; }
+  .times { @apply grid grid-cols-3 gap-2.5 md:grid-cols-4; }
+  .time { @apply min-h-12 cursor-pointer rounded-full!; background: transparent; border: 1px solid var(--line); color: var(--ink); font-weight: 500; font-variant-numeric: tabular-nums; transition: border-color .2s, background-color .2s, color .2s, transform .25s var(--ease); }
+  .time:hover { border-color: var(--ink); transform: translateY(-1px); }
+  .time[aria-pressed="true"] { background: var(--color-orama); border-color: var(--color-orama); color: #fff; }
+  .empty-msg { @apply py-2 col-span-full; color: var(--muted); }
+
+  .bnav { @apply flex flex-col-reverse gap-3 mt-10 md:flex-row md:justify-between; }
+  .bnav .btn { @apply w-full md:w-auto md:min-w-[210px]; }
+
+  .done { @apply text-center; }
+  .done .check { @apply grid place-items-center w-20 h-20 mx-auto mb-5 rounded-full!; background: color-mix(in srgb, var(--color-orama) 10%, transparent); }
+  .done .check svg { @apply w-10 h-10 fill-none; stroke: var(--color-orama); stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 50; animation: draw-check .8s .2s both; }
+  @keyframes draw-check { from { stroke-dashoffset: 50; } to { stroke-dashoffset: 0; } }
+  .code { @apply my-3 text-[clamp(4.5rem,18vw,8.5rem)]; line-height: .9; color: var(--color-orama); letter-spacing: -.02em; }
+  .done .summary { @apply mx-auto my-6 max-w-[460px] text-left; }
+
+  .lookup-card { @apply grid gap-8 p-7 md:grid-cols-[1fr_1.1fr] md:items-start md:gap-14 md:p-14; background: var(--card); border: 1px solid var(--line); border-radius: var(--r-xl); box-shadow: var(--shadow-md); }
+  .found { @apply mt-5; }
+  .found .row { @apply flex flex-col gap-3 md:flex-row; }
+
+  .step-sub { @apply -mt-3 mb-5 text-[.98rem]; color: var(--muted); }
+  /* Día sin disponibilidad: se puede abrir (para ver el aviso y escribir por WhatsApp) pero se ve tachado */
+  .day.sold { color: var(--muted); text-decoration: line-through; text-decoration-thickness: 1.5px; opacity: .75; }
+  .day.sold[aria-pressed="true"] { background: var(--card-2); color: var(--ink); opacity: 1; }
+  .soldout { @apply grid gap-3 p-5 mt-1; background: var(--card-2); border-radius: var(--r-md); border-left: 3px solid var(--color-orama); }
+  .soldout b { @apply text-[1.15rem]; font-weight: 600; letter-spacing: -.02em; }
+  .soldout p { color: var(--muted); }
+  .soldout .btn { @apply justify-self-start; }
+}

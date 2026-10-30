@@ -1,0 +1,287 @@
+{
+  "escenario": "C-conflicto",
+  "fecha": "2026-10-30T15:17:12.324Z",
+  "maquina": {
+    "cpu": "12th Gen Intel(R) Core(TM) i7-12700H",
+    "nucleosLogicos": 20,
+    "ramGB": 16,
+    "so": "win32 10.0.26200",
+    "node": "v22.20.0"
+  },
+  "solicitudesPorRonda": 200,
+  "rondas": [
+    {
+      "ronda": 1,
+      "fecha": "2026-10-31",
+      "hora": "08:00",
+      "solicitudes": 200,
+      "creadas201": 1,
+      "conflicto409": 199,
+      "otros": 0
+    },
+    {
+      "ronda": 2,
+      "fecha": "2026-11-01",
+      "hora": "10:00",
+      "solicitudes": 200,
+      "creadas201": 1,
+      "conflicto409": 199,
+      "otros": 0
+    },
+    {
+      "ronda": 3,
+      "fecha": "2026-11-04",
+      "hora": "12:00",
+      "solicitudes": 200,
+      "creadas201": 1,
+      "conflicto409": 199,
+      "otros": 0
+    },
+    {
+      "ronda": 4,
+      "fecha": "2026-11-05",
+      "hora": "14:00",
+      "solicitudes": 200,
+      "creadas201": 1,
+      "conflicto409": 199,
+      "otros": 0
+    },
+    {
+      "ronda": 5,
+      "fecha": "2026-11-06",
+      "hora": "08:00",
+      "solicitudes": 200,
+      "creadas201": 1,
+      "conflicto409": 199,
+      "otros": 0
+    },
+    {
+      "ronda": 6,
+      "fecha": "2026-11-07",
+      "hora": "10:00",
+      "solicitudes": 200,
+      "creadas201": 1,
+      "conflicto409": 199,
+      "otros": 0
+    },
+    {
+      "ronda": 7,
+      "fecha": "2026-11-08",
+      "hora": "12:00",
+      "solicitudes": 200,
+      "creadas201": 1,
+      "conflicto409": 199,
+      "otros": 0
+    },
+    {
+      "ronda": 8,
+      "fecha": "2026-11-11",
+      "hora": "14:00",
+      "solicitudes": 200,
+      "creadas201": 1,
+      "conflicto409": 199,
+      "otros": 0
+    },
+    {
+      "ronda": 9,
+      "fecha": "2026-11-12",
+      "hora": "08:00",
+      "solicitudes": 200,
+      "creadas201": 1,
+      "conflicto409": 199,
+      "otros": 0
+    },
+    {
+      "ronda": 10,
+      "fecha": "2026-11-13",
+      "hora": "10:00",
+      "solicitudes": 200,
+      "creadas201": 1,
+      "conflicto409": 199,
+      "otros": 0
+    },
+    {
+      "ronda": 11,
+      "fecha": "2026-11-14",
+      "hora": "12:00",
+      "solicitudes": 200,
+      "creadas201": 1,
+      "conflicto409": 199,
+      "otros": 0
+    },
+    {
+      "ronda": 12,
+      "fecha": "2026-11-15",
+      "hora": "14:00",
+      "solicitudes": 200,
+      "creadas201": 1,
+      "conflicto409": 199,
+      "otros": 0
+    },
+    {
+      "ronda": 13,
+      "fecha": "2026-11-18",
+      "hora": "08:00",
+      "solicitudes": 200,
+      "creadas201": 1,
+      "conflicto409": 199,
+      "otros": 0
+    },
+    {
+      "ronda": 14,
+      "fecha": "2026-11-19",
+      "hora": "10:00",
+      "solicitudes": 200,
+      "creadas201": 1,
+      "conflicto409": 199,
+      "otros": 0
+    },
+    {
+      "ronda": 15,
+      "fecha": "2026-11-20",
+      "hora": "12:00",
+      "solicitudes": 200,
+      "creadas201": 1,
+      "conflicto409": 199,
+      "otros": 0
+    },
+    {
+      "ronda": 16,
+      "fecha": "2026-11-21",
+      "hora": "14:00",
+      "solicitudes": 200,
+      "creadas201": 1,
+      "conflicto409": 199,
+      "otros": 0
+    },
+    {
+      "ronda": 17,
+      "fecha": "2026-11-22",
+      "hora": "08:00",
+      "solicitudes": 200,
+      "creadas201": 1,
+      "conflicto409": 199,
+      "otros": 0
+    },
+    {
+      "ronda": 18,
+      "fecha": "2026-11-25",
+      "hora": "10:00",
+      "solicitudes": 200,
+      "creadas201": 1,
+      "conflicto409": 199,
+      "otros": 0
+    },
+    {
+      "ronda": 19,
+      "fecha": "2026-11-26",
+      "hora": "12:00",
+      "solicitudes": 200,
+      "creadas201": 1,
+      "conflicto409": 199,
+      "otros": 0
+    },
+    {
+      "ronda": 20,
+      "fecha": "2026-11-27",
+      "hora": "14:00",
+      "solicitudes": 200,
+      "creadas201": 1,
+      "conflicto409": 199,
+      "otros": 0
+    }
+  ],
+  "todasLasRondasExactamenteUnaReserva": true,
+  "solapados": {
+    "solicitudes": 200,
+    "creadas": 2,
+    "conflicto409": 198,
+    "otros": 0
+  },
+  "dobleClic": {
+    "solicitudes": 20,
+    "respuestas201": 1,
+    "reintentos200": 19,
+    "otros": 0
+  },
+  "resumenHttp": {
+    "solicitudes": 4223,
+    "rps": 294.7,
+    "promedioMs": 346.65,
+    "medianaMs": 297.82,
+    "p95Ms": 719.11,
+    "p99Ms": 805.99,
+    "maxMs": 910.3,
+    "estados": {
+      "200": 22,
+      "201": 23,
+      "409": 4178
+    }
+  },
+  "servidor": {
+    "n": 14,
+    "rssMB": {
+      "inicio": 111.75,
+      "fin": 139.66,
+      "max": 141.19
+    },
+    "heapMB": {
+      "max": 57.68
+    },
+    "cpuServerNucleoPct": {
+      "avg": 92.55,
+      "max": 122.02
+    },
+    "cpuMaquinaPct": {
+      "avg": 17.34,
+      "max": 24.7
+    },
+    "bucleP99ms": {
+      "max": 509.61
+    },
+    "bucleMaxMs": 561.51,
+    "enCursoMax": 1
+  },
+  "baseDeDatos": {
+    "conexiones": 1,
+    "motor": "SQLite (en proceso, una conexión)",
+    "transaccionesOk": 42,
+    "transaccionesFallidas": 4178,
+    "transaccionMs": {
+      "n": 4220,
+      "avg": 1.12,
+      "p50": 1.1,
+      "p95": 1.99,
+      "p99": 3.52,
+      "max": 12.98
+    },
+    "esperaDeCandadoMs": {
+      "n": 4220,
+      "avg": 0.03,
+      "p50": 0.03,
+      "p95": 0.05,
+      "p99": 0.08,
+      "max": 0.41
+    }
+  },
+  "registros": {
+    "lines": 4272,
+    "errors": 0,
+    "warns": 4181
+  },
+  "consistencia": {
+    "reservas": 23,
+    "confirmadas": 23,
+    "canceladas": 0,
+    "casilleros": 92,
+    "casillerosHuerfanos": 0,
+    "confirmadasConBloqueIncoherente": 0,
+    "solapamientos": 0,
+    "codigosDuplicados": 0,
+    "clientes": 23,
+    "integridadSqlite": "ok",
+    "tamanoMB": 0.21
+  },
+  "reservasEsperadas": 23,
+  "reservasEnBD": 23
+}

@@ -1,0 +1,14 @@
+node_modules
+dist
+data
+.env
+.env.*
+!.env.example
+.git
+.github
+_old
+Homepage
+tests
+docs
+.claude
+*.log

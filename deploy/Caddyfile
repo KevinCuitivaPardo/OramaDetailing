@@ -1,0 +1,14 @@
+# Proxy inverso con HTTPS automático (Caddy). Cambia el dominio.
+# /api/eventos es un flujo en vivo (SSE): no se comprime ni se acumula, para que los avisos lleguen al instante.
+tudominio.com {
+	@eventos path /api/eventos
+	handle @eventos {
+		reverse_proxy 127.0.0.1:8080 {
+			flush_interval -1
+		}
+	}
+	handle {
+		encode zstd gzip
+		reverse_proxy 127.0.0.1:8080
+	}
+}

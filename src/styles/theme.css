@@ -1,0 +1,41 @@
+/*
+  Sistema de diseño — "Luz de showroom"
+  Lienzo hueso cálido + tinta casi negra; capítulos oscuros solo donde hay impacto.
+  Un único acento (rojo Orama), usado con moderación. Titulares en sans moderna
+  con palabras clave en serif cursiva.
+*/
+@theme {
+  /* Color */
+  --color-orama: #c4161c;
+  --color-orama-soft: #e5484d;
+  --color-ink: #0f0f11;
+  --color-bone: #f4f2ee;
+  --color-sand: #eae7e0;
+  --color-carbon: #0b0b0c;
+  --color-carbon-deep: #09090a;
+  --color-ash: #a09f9a;
+
+  /* Tipografía */
+  --font-sans: "Geist Variable", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-display: "Geist Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Instrument Serif", "Times New Roman", serif;
+  --text-hero: clamp(3rem, 8.2vw, 7.25rem);
+  --text-display: clamp(2.4rem, 5.6vw, 4.5rem);
+
+  /* Layout */
+  --breakpoint-lg: 68.75rem; /* 1100px */
+  --container-page: 84rem;   /* 1344px */
+}
+
+:root {
+  /* Radios y sombras coherentes */
+  --r-sm: 10px; --r-md: 16px; --r-lg: 24px; --r-xl: 32px;
+  --shadow-sm: 0 1px 2px rgb(15 15 17 / .05), 0 4px 12px -6px rgb(15 15 17 / .12);
+  --shadow-md: 0 1px 2px rgb(15 15 17 / .05), 0 18px 40px -18px rgb(15 15 17 / .28);
+  --shadow-lg: 0 2px 4px rgb(15 15 17 / .06), 0 40px 80px -32px rgb(15 15 17 / .42);
+  --ease: cubic-bezier(.22, .7, .2, 1);
+
+  /* Espaciado base de 8px (nombres aparte para no pisar las utilidades de Tailwind) */
+  --space-8: 8px; --space-16: 16px; --space-24: 24px; --space-32: 32px; --space-40: 40px;
+  --space-48: 48px; --space-64: 64px; --space-80: 80px; --space-120: 120px;
+}

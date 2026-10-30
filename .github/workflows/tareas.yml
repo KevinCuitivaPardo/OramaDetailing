@@ -1,0 +1,35 @@
+# Red de seguridad: dispara las tareas programadas desde fuera del servidor. Son IDEMPOTENTES (una repetición no duplica nada),
+# así que sirven aunque el servidor haya estado dormido o reiniciándose. Requiere dos secretos del repositorio:
+#   APP_URL               → https://tu-dominio (sin barra final)
+#   JOBS_TRIGGER_SECRET   → el mismo valor que la variable de entorno del servidor
+# Nota: GitHub puede retrasar los cron programados y los desactiva si el repositorio no tiene actividad en 60 días.
+name: tareas-programadas
+on:
+  schedule:
+    - cron: '5 3 * * *'     # 23:05 en Puerto Rico (UTC-4): resumen del día siguiente
+    - cron: '15 4 * * 1'    # lunes 00:15 en Puerto Rico: recupera la limpieza si el domingo 23:59 no se ejecutó
+    - cron: '30 6 * * *'    # 02:30 en Puerto Rico: respaldo
+  workflow_dispatch:
+jobs:
+  disparar:
+    runs-on: ubuntu-latest
+    permissions: {}
+    steps:
+      - name: Llamar a la tarea que corresponde
+        env:
+          APP_URL: ${{ secrets.APP_URL }}
+          SECRET: ${{ secrets.JOBS_TRIGGER_SECRET }}
+          CRON: ${{ github.event.schedule }}
+        run: |
+          set -eu
+          case "${CRON:-}" in
+            "5 3 * * *")  tareas="resumen correos" ;;
+            "15 4 * * 1") tareas="limpieza" ;;
+            "30 6 * * *") tareas="respaldo" ;;
+            *)            tareas="resumen correos limpieza respaldo" ;;
+          esac
+          for t in $tareas; do
+            curl --fail --silent --show-error --max-time 60 --retry 3 --retry-delay 10 \
+              -X POST -H "Authorization: Bearer ${SECRET}" "${APP_URL}/api/internal/tareas/${t}"
+            echo " ← ${t}"
+          done

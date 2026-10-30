@@ -1,0 +1,46 @@
+@layer base {
+  html { scroll-behavior: smooth; scroll-padding-top: 84px; -webkit-text-size-adjust: 100%; }
+  body {
+    @apply bg-bone text-ink font-sans overflow-x-hidden min-w-[320px];
+    font-size: 1.0625rem; line-height: 1.6; letter-spacing: -.006em; font-weight: 400;
+    -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
+  }
+  h1, h2, h3, h4 { @apply font-display; font-weight: 600; letter-spacing: -.035em; line-height: 1.02; }
+  /* Palabra clave en serif cursiva: da carácter sin gritar */
+  h1 em, h2 em, h3 em, .code {
+    font-family: var(--font-serif); font-style: italic; font-weight: 400; letter-spacing: -.01em; color: var(--em);
+  }
+  b, strong { font-weight: 600; }
+  img, svg, canvas { max-width: 100%; }
+  button, input { font: inherit; color: inherit; }
+  [hidden] { display: none !important; }
+  ::selection { background: var(--color-orama); color: #fff; }
+  :focus-visible { outline: 2px solid var(--color-orama); outline-offset: 3px; border-radius: 6px; }
+}
+
+/* Superficies: clara (por defecto), oscura y negra. Todos los componentes leen estas variables. */
+@layer components {
+  .surface-light, :root {
+    --surface: #f4f2ee; --ink: #0f0f11; --muted: #6b6963; --card: #ffffff; --card-2: #efede8;
+    --line: rgb(15 15 17 / .11); --field: #ffffff; --em: #c4161c;
+  }
+  .surface-light { background: var(--surface); color: var(--ink); }
+  .surface-sand { --surface: #eae7e0; --card: #f6f4ef; --card-2: #e2dfd7; --line: rgb(15 15 17 / .12); background: var(--surface); color: var(--ink); }
+  .surface-dark, .surface-black {
+    --surface: #0b0b0c; --ink: #f5f4f1; --muted: #9c9b96; --card: #141416; --card-2: #1b1b1e;
+    --line: rgb(245 244 241 / .12); --field: #101012; --em: #ef6a6e;
+    background: var(--surface); color: var(--ink);
+  }
+  .surface-black { --surface: #09090a; }
+
+  .section { @apply relative py-24 md:py-36; }
+  .container-page { @apply mx-auto w-full px-6 md:px-10; max-width: var(--container-page); }
+
+  .eyebrow { @apply inline-flex items-center gap-2.5 mb-5 text-[.8rem] uppercase; letter-spacing: .16em; font-weight: 500; color: var(--muted); }
+  .eyebrow::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--color-orama); }
+  .section-title { font-size: var(--text-display); line-height: 1; max-width: 18ch; }
+  .lead { @apply mt-6 text-[1.2rem]; max-width: 52ch; color: var(--muted); line-height: 1.5; }
+  .note { @apply mt-6 text-[.95rem]; color: var(--muted); }
+  .sec-head { @apply relative mb-14 md:mb-20; }
+  .accent { color: var(--em); }
+}

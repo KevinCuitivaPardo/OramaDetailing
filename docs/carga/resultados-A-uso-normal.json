@@ -1,0 +1,172 @@
+{
+  "escenario": "A-uso-normal",
+  "fecha": "2026-10-30T15:03:08.167Z",
+  "maquina": {
+    "cpu": "12th Gen Intel(R) Core(TM) i7-12700H",
+    "nucleosLogicos": 20,
+    "ramGB": 16,
+    "so": "win32 10.0.26200",
+    "node": "v22.20.0"
+  },
+  "config": {
+    "vus": 40,
+    "duracionS": 90,
+    "pausas": "humanas 0.3–2.5 s entre pasos"
+  },
+  "global": {
+    "solicitudes": 3853,
+    "rps": 42.2,
+    "promedioMs": 5.04,
+    "medianaMs": 4.19,
+    "p95Ms": 10.98,
+    "p99Ms": 15.65,
+    "maxMs": 62.8,
+    "estados": {
+      "200": 3421,
+      "201": 430,
+      "409": 2
+    }
+  },
+  "porSolicitud": {
+    "mes": {
+      "solicitudes": 939,
+      "rps": 10.4,
+      "promedioMs": 5.91,
+      "medianaMs": 5.55,
+      "p95Ms": 9.95,
+      "p99Ms": 15.37,
+      "maxMs": 19.4,
+      "estados": {
+        "200": 939
+      }
+    },
+    "config": {
+      "solicitudes": 936,
+      "rps": 10.4,
+      "promedioMs": 3.27,
+      "medianaMs": 2.76,
+      "p95Ms": 7.33,
+      "p99Ms": 12.25,
+      "maxMs": 24.4,
+      "estados": {
+        "200": 936
+      }
+    },
+    "disponibilidad_dia": {
+      "solicitudes": 936,
+      "rps": 10.4,
+      "promedioMs": 3.63,
+      "medianaMs": 3.2,
+      "p95Ms": 6.84,
+      "p99Ms": 13.1,
+      "maxMs": 25.2,
+      "estados": {
+        "200": 936
+      }
+    },
+    "reservar": {
+      "solicitudes": 432,
+      "rps": 5,
+      "promedioMs": 9.25,
+      "medianaMs": 8.33,
+      "p95Ms": 15.52,
+      "p99Ms": 19.9,
+      "maxMs": 62.8,
+      "estados": {
+        "201": 430,
+        "409": 2
+      }
+    },
+    "consultar": {
+      "solicitudes": 305,
+      "rps": 3.6,
+      "promedioMs": 4.3,
+      "medianaMs": 3.84,
+      "p95Ms": 8.44,
+      "p99Ms": 13.54,
+      "maxMs": 18.9,
+      "estados": {
+        "200": 305
+      }
+    },
+    "cancelar": {
+      "solicitudes": 305,
+      "rps": 3.6,
+      "promedioMs": 6.84,
+      "medianaMs": 6.65,
+      "p95Ms": 10.84,
+      "p99Ms": 16.05,
+      "maxMs": 21.5,
+      "estados": {
+        "200": 305
+      }
+    }
+  },
+  "reservasCreadas": 430,
+  "conflictos409": 2,
+  "otrosEstados": 0,
+  "servidor": {
+    "n": 92,
+    "rssMB": {
+      "inicio": 78.29,
+      "fin": 109.78,
+      "max": 110.45
+    },
+    "heapMB": {
+      "max": 35.22
+    },
+    "cpuServerNucleoPct": {
+      "avg": 15.02,
+      "max": 44.97
+    },
+    "cpuMaquinaPct": {
+      "avg": 17.88,
+      "max": 43.5
+    },
+    "bucleP99ms": {
+      "max": 23.12
+    },
+    "bucleMaxMs": 68.88,
+    "enCursoMax": 1
+  },
+  "baseDeDatos": {
+    "conexiones": 1,
+    "motor": "SQLite (en proceso, una conexión)",
+    "transaccionesOk": 735,
+    "transaccionesFallidas": 2,
+    "transaccionMs": {
+      "n": 737,
+      "avg": 3.93,
+      "p50": 3.39,
+      "p95": 9.66,
+      "p99": 11.29,
+      "max": 22.59
+    },
+    "esperaDeCandadoMs": {
+      "n": 737,
+      "avg": 0.03,
+      "p50": 0.03,
+      "p95": 0.05,
+      "p99": 0.08,
+      "max": 0.25
+    }
+  },
+  "registros": {
+    "lines": 2213,
+    "errors": 0,
+    "warns": 5
+  },
+  "consistencia": {
+    "reservas": 430,
+    "confirmadas": 125,
+    "canceladas": 305,
+    "casilleros": 614,
+    "casillerosHuerfanos": 0,
+    "confirmadasConBloqueIncoherente": 0,
+    "solapamientos": 0,
+    "codigosDuplicados": 0,
+    "clientes": 430,
+    "integridadSqlite": "ok",
+    "tamanoMB": 2.3
+  }
+}

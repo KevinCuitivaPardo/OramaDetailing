@@ -1,0 +1,12 @@
+@layer components {
+  .field { @apply grid gap-2 mb-4; }
+  .field label { @apply text-[.9rem]; font-weight: 500; }
+  .field label em { font-family: inherit; font-style: normal; color: var(--muted); font-weight: 400; }
+  .field input { @apply w-full min-h-[54px] px-4; background: var(--field); border: 1px solid var(--line); border-radius: var(--r-sm); color: var(--ink); transition: border-color .2s, box-shadow .25s; }
+  .field input::placeholder { color: color-mix(in srgb, var(--muted) 70%, transparent); }
+  .field input:hover { border-color: color-mix(in srgb, var(--ink) 30%, transparent); }
+  .field input:focus { outline: none; border-color: var(--color-orama); box-shadow: 0 0 0 4px rgb(196 22 28 / .14); }
+  .field .err { @apply hidden text-[.88rem]; color: var(--color-orama); }
+  .field.bad input { border-color: var(--color-orama); }
+  .field.bad .err { @apply block; }
+}

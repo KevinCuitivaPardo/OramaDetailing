@@ -1,0 +1,74 @@
+/* Panel del propietario: usa los mismos tokens, tipografías, botones, calendario y campos que la página pública. */
+@layer components {
+  .ap-bar { background: var(--color-carbon, #0b0b0c); color: #f5f4f1; }
+  .ap-bar .in { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 68px; }
+  .ap-logo { font-size: 1.35rem; font-weight: 600; letter-spacing: -.03em; }
+  .ap-logo em { font-family: var(--font-serif, 'Instrument Serif', serif); font-style: italic; font-weight: 400; color: var(--color-orama-soft, #e5484d); }
+  .ap-bar .btn-outline { color: #f5f4f1; border-color: rgb(245 244 241 / .3); min-height: 42px; }
+  .ap-bar .btn-outline:hover { border-color: #f5f4f1; background: rgb(245 244 241 / .08); }
+
+  .ap-head { padding: 40px 0 8px; }
+  .ap-head h1 { font-size: clamp(2.2rem, 5vw, 3.4rem); line-height: 1; }
+  .ap-head p { margin-top: 10px; color: var(--muted); max-width: 56ch; }
+
+  .ap-menu { display: flex; gap: 8px; flex-wrap: wrap; margin: 22px 0 28px; }
+  .ap-menu button { min-height: 46px; padding: 0 22px; border-radius: 999px; cursor: pointer; font-weight: 500; background: transparent; color: var(--ink); border: 1px solid var(--line); transition: background-color .2s, color .2s, border-color .2s; }
+  .ap-menu button:hover { border-color: var(--ink); }
+  .ap-menu button[aria-selected='true'] { background: var(--ink); color: var(--surface); border-color: var(--ink); }
+
+  .ap-grid { display: grid; gap: 24px; align-items: start; }
+  @media (min-width: 940px) { .ap-grid.two { grid-template-columns: minmax(340px, 440px) 1fr; } }
+  .ap-card { background: var(--card); border: 1px solid var(--line); border-radius: var(--r-lg); padding: 24px; box-shadow: var(--shadow-sm); }
+  .ap-card + .ap-card { margin-top: 18px; }
+  .ap-card h2, .ap-card h3 { font-size: 1.35rem; letter-spacing: -.03em; line-height: 1.1; margin: 0 0 6px; }
+  .ap-card .sub { color: var(--muted); font-size: .98rem; margin: 0 0 16px; max-width: 62ch; }
+  .ap-row { display: flex; gap: 14px; flex-wrap: wrap; align-items: flex-end; }
+  .ap-row .field { margin-bottom: 0; }
+
+  /* Selectores y campos con el mismo aspecto que el formulario de reservas */
+  .field select { width: 100%; min-height: 54px; padding: 0 14px; background: var(--field); border: 1px solid var(--line); border-radius: var(--r-sm); color: var(--ink); }
+  .field select:focus, .field input:focus { outline: none; border-color: var(--color-orama, #c4161c); box-shadow: 0 0 0 4px rgb(196 22 28 / .14); }
+  .field > span { font-size: .9rem; font-weight: 500; }
+
+  /* Calendario: reutiliza .cal/.day de la página pública */
+  .ap-cal .day { position: relative; }
+  .ap-cal .day:not([disabled]) { cursor: pointer; }
+  .ap-cal .day.has::after { content: ""; position: absolute; bottom: 6px; left: 50%; width: 5px; height: 5px; margin-left: -2.5px; border-radius: 50%; background: var(--color-orama, #c4161c); }
+  .ap-cal .day[aria-pressed='true'].has::after { background: #fff; }
+  .ap-cal .day.shut { color: var(--muted); text-decoration: line-through; text-decoration-thickness: 1.5px; opacity: .8; }
+  .ap-cal .day.shut[aria-pressed='true'] { color: #fff; text-decoration: none; opacity: 1; }
+  .ap-cal .day.today { box-shadow: inset 0 0 0 1.5px var(--ink); }
+  .ap-legend { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 16px; font-size: .88rem; color: var(--muted); }
+  .ap-legend i { display: inline-block; width: 9px; height: 9px; border-radius: 50%; background: var(--color-orama, #c4161c); margin-right: 6px; }
+  .ap-legend s { text-decoration-thickness: 1.5px; }
+
+  .ap-pill { display: inline-flex; align-items: center; min-height: 28px; padding: 0 12px; border-radius: 999px; font-size: .85rem; font-weight: 500; border: 1px solid var(--line); color: var(--muted); }
+  .ap-pill.ok { color: #1b7a4d; border-color: rgb(27 122 77 / .35); background: rgb(27 122 77 / .06); }
+  .ap-pill.warn { color: #9a6a00; border-color: rgb(154 106 0 / .35); background: rgb(154 106 0 / .07); }
+
+  .ap-res { display: grid; gap: 4px; padding: 16px 18px; border: 1px solid var(--line); border-radius: var(--r-md); background: var(--card); margin-top: 12px; }
+  .ap-res .t { font-weight: 600; font-size: 1.1rem; letter-spacing: -.02em; }
+  .ap-res .t span { color: var(--color-orama, #c4161c); font-variant-numeric: tabular-nums; }
+  .ap-res .m { color: var(--muted); font-size: .95rem; }
+  .ap-res .a { margin-top: 8px; display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+  .ap-res a { color: inherit; }
+
+  .btn-danger { background: #fff; color: var(--color-orama, #c4161c); border-color: rgb(196 22 28 / .45); }
+  .btn-danger:hover { background: rgb(196 22 28 / .06); border-color: var(--color-orama, #c4161c); }
+  .btn-danger::after { content: none; }
+  .ap-card .btn::after, .ap-menu button::after { content: none; }
+
+  .ap-days { display: flex; gap: 8px; flex-wrap: wrap; }
+  .ap-days button { min-height: 48px; min-width: 62px; padding: 0 14px; border-radius: 999px; cursor: pointer; background: transparent; border: 1px solid var(--line); color: var(--ink); font-weight: 500; }
+  .ap-days button[aria-pressed='true'] { background: var(--color-orama, #c4161c); border-color: var(--color-orama, #c4161c); color: #fff; }
+
+  .ap-block { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; padding: 12px 0; border-top: 1px solid var(--line); }
+  .ap-block:first-of-type { border-top: 0; }
+  .ap-block b { font-weight: 600; }
+  .ap-msg { margin: 16px 0 0; }
+  .ap-wrap { padding-bottom: 80px; }
+  .login-wrap { min-height: 100svh; display: grid; place-items: center; padding: 24px; background: var(--color-carbon, #0b0b0c); }
+  .login-card { width: min(420px, 100%); background: var(--card); border-radius: var(--r-xl); padding: 36px 30px; box-shadow: var(--shadow-lg); }
+  .login-card h1 { font-size: 2.2rem; margin-bottom: 8px; }
+  .login-card p { color: var(--muted); margin-bottom: 22px; }
+}

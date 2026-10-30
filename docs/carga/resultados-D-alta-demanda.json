@@ -1,0 +1,984 @@
+{
+  "escenario": "D-alta-demanda",
+  "fecha": "2026-10-30T15:06:20.719Z",
+  "maquina": {
+    "cpu": "12th Gen Intel(R) Core(TM) i7-12700H",
+    "nucleosLogicos": 20,
+    "ramGB": 16,
+    "so": "win32 10.0.26200",
+    "node": "v22.20.0"
+  },
+  "config": {
+    "modelo": "cerrado (cada usuario espera su respuesta y repite sin pausa)",
+    "mezcla": "85 % lecturas, 15 % flujo reservar→consultar→cancelar",
+    "segundosPorEscalon": 20
+  },
+  "escalones": [
+    {
+      "usuariosVirtuales": 10,
+      "solicitudes": 20308,
+      "rps": 1014.5,
+      "promedioMs": 9.4,
+      "medianaMs": 9.06,
+      "p95Ms": 15.32,
+      "p99Ms": 20.03,
+      "maxMs": 41,
+      "estados": {
+        "200": 18221,
+        "201": 2066,
+        "409": 21
+      },
+      "servidor": {
+        "n": 20,
+        "rssMB": {
+          "inicio": 107.36,
+          "fin": 167.96,
+          "max": 167.96
+        },
+        "heapMB": {
+          "max": 82.47
+        },
+        "cpuServerNucleoPct": {
+          "avg": 98.79,
+          "max": 124.89
+        },
+        "cpuMaquinaPct": {
+          "avg": 14.76,
+          "max": 23.1
+        },
+        "bucleP99ms": {
+          "max": 25.77
+        },
+        "bucleMaxMs": 44.6,
+        "enCursoMax": 1
+      },
+      "porSolicitud": {
+        "disponibilidad_dia": {
+          "solicitudes": 9874,
+          "rps": 493.8,
+          "promedioMs": 8.92,
+          "medianaMs": 8.59,
+          "p95Ms": 14.67,
+          "p99Ms": 19.41,
+          "maxMs": 33.8,
+          "estados": {
+            "200": 9874
+          }
+        },
+        "reservar": {
+          "solicitudes": 2087,
+          "rps": 104.5,
+          "promedioMs": 10.76,
+          "medianaMs": 10.31,
+          "p95Ms": 17.24,
+          "p99Ms": 22.1,
+          "maxMs": 41,
+          "estados": {
+            "201": 2066,
+            "409": 21
+          }
+        },
+        "consultar": {
+          "solicitudes": 2066,
+          "rps": 103.5,
+          "promedioMs": 9.07,
+          "medianaMs": 8.79,
+          "p95Ms": 14.36,
+          "p99Ms": 17.89,
+          "maxMs": 22.6,
+          "estados": {
+            "200": 2066
+          }
+        },
+        "cancelar": {
+          "solicitudes": 2066,
+          "rps": 103.5,
+          "promedioMs": 10.46,
+          "medianaMs": 10.1,
+          "p95Ms": 16.54,
+          "p99Ms": 21.54,
+          "maxMs": 33.8,
+          "estados": {
+            "200": 2066
+          }
+        },
+        "mes": {
+          "solicitudes": 2819,
+          "rps": 141.5,
+          "promedioMs": 9.84,
+          "medianaMs": 9.52,
+          "p95Ms": 15.62,
+          "p99Ms": 20.23,
+          "maxMs": 28.6,
+          "estados": {
+            "200": 2819
+          }
+        },
+        "config": {
+          "solicitudes": 1396,
+          "rps": 70.1,
+          "promedioMs": 8.8,
+          "medianaMs": 8.46,
+          "p95Ms": 14.27,
+          "p99Ms": 19.32,
+          "maxMs": 30.1,
+          "estados": {
+            "200": 1396
+          }
+        }
+      }
+    },
+    {
+      "usuariosVirtuales": 25,
+      "solicitudes": 20671,
+      "rps": 1033.1,
+      "promedioMs": 23.03,
+      "medianaMs": 22.25,
+      "p95Ms": 35.54,
+      "p99Ms": 41.28,
+      "maxMs": 61.4,
+      "estados": {
+        "200": 18543,
+        "201": 2062,
+        "409": 66
+      },
+      "servidor": {
+        "n": 20,
+        "rssMB": {
+          "inicio": 168.29,
+          "fin": 170.32,
+          "max": 170.32
+        },
+        "heapMB": {
+          "max": 81.57
+        },
+        "cpuServerNucleoPct": {
+          "avg": 93.14,
+          "max": 102.95
+        },
+        "cpuMaquinaPct": {
+          "avg": 13.53,
+          "max": 23.7
+        },
+        "bucleP99ms": {
+          "max": 36.24
+        },
+        "bucleMaxMs": 53.94,
+        "enCursoMax": 1
+      },
+      "porSolicitud": {
+        "mes": {
+          "solicitudes": 2893,
+          "rps": 144.7,
+          "promedioMs": 23.51,
+          "medianaMs": 22.78,
+          "p95Ms": 36.22,
+          "p99Ms": 40.85,
+          "maxMs": 61.4,
+          "estados": {
+            "200": 2893
+          }
+        },
+        "disponibilidad_dia": {
+          "solicitudes": 10005,
+          "rps": 500.4,
+          "promedioMs": 22.57,
+          "medianaMs": 21.8,
+          "p95Ms": 35.08,
+          "p99Ms": 40.99,
+          "maxMs": 60.4,
+          "estados": {
+            "200": 10005
+          }
+        },
+        "config": {
+          "solicitudes": 1521,
+          "rps": 76.2,
+          "promedioMs": 22.49,
+          "medianaMs": 21.76,
+          "p95Ms": 34.58,
+          "p99Ms": 40.68,
+          "maxMs": 52.2,
+          "estados": {
+            "200": 1521
+          }
+        },
+        "reservar": {
+          "solicitudes": 2128,
+          "rps": 106.5,
+          "promedioMs": 24.4,
+          "medianaMs": 23.6,
+          "p95Ms": 36.83,
+          "p99Ms": 42.58,
+          "maxMs": 61.3,
+          "estados": {
+            "201": 2062,
+            "409": 66
+          }
+        },
+        "consultar": {
+          "solicitudes": 2062,
+          "rps": 103.2,
+          "promedioMs": 22.54,
+          "medianaMs": 21.75,
+          "p95Ms": 34.61,
+          "p99Ms": 41.11,
+          "maxMs": 59.7,
+          "estados": {
+            "200": 2062
+          }
+        },
+        "cancelar": {
+          "solicitudes": 2062,
+          "rps": 103.2,
+          "promedioMs": 24.09,
+          "medianaMs": 23.21,
+          "p95Ms": 36.29,
+          "p99Ms": 42.41,
+          "maxMs": 55,
+          "estados": {
+            "200": 2062
+          }
+        }
+      }
+    },
+    {
+      "usuariosVirtuales": 50,
+      "solicitudes": 18784,
+      "rps": 935.3,
+      "promedioMs": 50.73,
+      "medianaMs": 50.28,
+      "p95Ms": 71.4,
+      "p99Ms": 89.99,
+      "maxMs": 126.7,
+      "estados": {
+        "200": 16777,
+        "201": 1888,
+        "409": 119
+      },
+      "servidor": {
+        "n": 20,
+        "rssMB": {
+          "inicio": 169.6,
+          "fin": 172.28,
+          "max": 172.28
+        },
+        "heapMB": {
+          "max": 87.33
+        },
+        "cpuServerNucleoPct": {
+          "avg": 91.74,
+          "max": 100.5
+        },
+        "cpuMaquinaPct": {
+          "avg": 20.46,
+          "max": 31.3
+        },
+        "bucleP99ms": {
+          "max": 66.36
+        },
+        "bucleMaxMs": 117.83,
+        "enCursoMax": 1
+      },
+      "porSolicitud": {
+        "disponibilidad_dia": {
+          "solicitudes": 9119,
+          "rps": 455.4,
+          "promedioMs": 50.32,
+          "medianaMs": 49.89,
+          "p95Ms": 70.49,
+          "p99Ms": 88.55,
+          "maxMs": 118.9,
+          "estados": {
+            "200": 9119
+          }
+        },
+        "reservar": {
+          "solicitudes": 2007,
+          "rps": 100.3,
+          "promedioMs": 52.26,
+          "medianaMs": 51.79,
+          "p95Ms": 73.05,
+          "p99Ms": 89.44,
+          "maxMs": 110.7,
+          "estados": {
+            "201": 1888,
+            "409": 119
+          }
+        },
+        "config": {
+          "solicitudes": 1247,
+          "rps": 62.4,
+          "promedioMs": 49.72,
+          "medianaMs": 49.17,
+          "p95Ms": 69.01,
+          "p99Ms": 93.17,
+          "maxMs": 118.2,
+          "estados": {
+            "200": 1247
+          }
+        },
+        "consultar": {
+          "solicitudes": 1888,
+          "rps": 94.3,
+          "promedioMs": 50.31,
+          "medianaMs": 49.78,
+          "p95Ms": 71.31,
+          "p99Ms": 91.2,
+          "maxMs": 114.7,
+          "estados": {
+            "200": 1888
+          }
+        },
+        "cancelar": {
+          "solicitudes": 1888,
+          "rps": 94.2,
+          "promedioMs": 51.91,
+          "medianaMs": 51.35,
+          "p95Ms": 73.9,
+          "p99Ms": 94.66,
+          "maxMs": 119.8,
+          "estados": {
+            "200": 1888
+          }
+        },
+        "mes": {
+          "solicitudes": 2635,
+          "rps": 132,
+          "promedioMs": 50.93,
+          "medianaMs": 50.45,
+          "p95Ms": 72.27,
+          "p99Ms": 89.45,
+          "maxMs": 126.7,
+          "estados": {
+            "200": 2635
+          }
+        }
+      }
+    },
+    {
+      "usuariosVirtuales": 100,
+      "solicitudes": 20471,
+      "rps": 1014.8,
+      "promedioMs": 93.27,
+      "medianaMs": 94.29,
+      "p95Ms": 120.59,
+      "p99Ms": 135.16,
+      "maxMs": 197.6,
+      "estados": {
+        "200": 18332,
+        "201": 1869,
+        "409": 270
+      },
+      "servidor": {
+        "n": 20,
+        "rssMB": {
+          "inicio": 172.71,
+          "fin": 171.92,
+          "max": 172.88
+        },
+        "heapMB": {
+          "max": 86.6
+        },
+        "cpuServerNucleoPct": {
+          "avg": 91.38,
+          "max": 103.63
+        },
+        "cpuMaquinaPct": {
+          "avg": 14.54,
+          "max": 19.2
+        },
+        "bucleP99ms": {
+          "max": 107.28
+        },
+        "bucleMaxMs": 133.17,
+        "enCursoMax": 1
+      },
+      "porSolicitud": {
+        "disponibilidad_dia": {
+          "solicitudes": 10282,
+          "rps": 511.9,
+          "promedioMs": 93.09,
+          "medianaMs": 93.97,
+          "p95Ms": 120.94,
+          "p99Ms": 137.36,
+          "maxMs": 197.6,
+          "estados": {
+            "200": 10282
+          }
+        },
+        "config": {
+          "solicitudes": 1399,
+          "rps": 69.7,
+          "promedioMs": 92.54,
+          "medianaMs": 93.5,
+          "p95Ms": 118.84,
+          "p99Ms": 132.99,
+          "maxMs": 173.1,
+          "estados": {
+            "200": 1399
+          }
+        },
+        "mes": {
+          "solicitudes": 2913,
+          "rps": 145.1,
+          "promedioMs": 93.83,
+          "medianaMs": 94.64,
+          "p95Ms": 120.19,
+          "p99Ms": 133.95,
+          "maxMs": 189.8,
+          "estados": {
+            "200": 2913
+          }
+        },
+        "reservar": {
+          "solicitudes": 2139,
+          "rps": 106.3,
+          "promedioMs": 94.81,
+          "medianaMs": 96.44,
+          "p95Ms": 122.28,
+          "p99Ms": 140.33,
+          "maxMs": 192.8,
+          "estados": {
+            "201": 1869,
+            "409": 270
+          }
+        },
+        "consultar": {
+          "solicitudes": 1869,
+          "rps": 92.8,
+          "promedioMs": 92,
+          "medianaMs": 93.13,
+          "p95Ms": 118.87,
+          "p99Ms": 131.51,
+          "maxMs": 180.8,
+          "estados": {
+            "200": 1869
+          }
+        },
+        "cancelar": {
+          "solicitudes": 1869,
+          "rps": 92.7,
+          "promedioMs": 93.45,
+          "medianaMs": 94.77,
+          "p95Ms": 120.55,
+          "p99Ms": 139.45,
+          "maxMs": 185,
+          "estados": {
+            "200": 1869
+          }
+        }
+      }
+    },
+    {
+      "usuariosVirtuales": 200,
+      "solicitudes": 20279,
+      "rps": 995.3,
+      "promedioMs": 189,
+      "medianaMs": 193.63,
+      "p95Ms": 229.09,
+      "p99Ms": 274.79,
+      "maxMs": 334.2,
+      "estados": {
+        "200": 18097,
+        "201": 1680,
+        "409": 502
+      },
+      "servidor": {
+        "n": 20,
+        "rssMB": {
+          "inicio": 172.43,
+          "fin": 172.6,
+          "max": 173.39
+        },
+        "heapMB": {
+          "max": 87.77
+        },
+        "cpuServerNucleoPct": {
+          "avg": 91.22,
+          "max": 102.53
+        },
+        "cpuMaquinaPct": {
+          "avg": 14.4,
+          "max": 19.3
+        },
+        "bucleP99ms": {
+          "max": 134.48
+        },
+        "bucleMaxMs": 201.59,
+        "enCursoMax": 1
+      },
+      "porSolicitud": {
+        "disponibilidad_dia": {
+          "solicitudes": 10286,
+          "rps": 508.9,
+          "promedioMs": 188.51,
+          "medianaMs": 193.12,
+          "p95Ms": 228.47,
+          "p99Ms": 271.86,
+          "maxMs": 327,
+          "estados": {
+            "200": 10286
+          }
+        },
+        "reservar": {
+          "solicitudes": 2182,
+          "rps": 107.5,
+          "promedioMs": 190.51,
+          "medianaMs": 194.8,
+          "p95Ms": 228.89,
+          "p99Ms": 274.21,
+          "maxMs": 334.2,
+          "estados": {
+            "201": 1680,
+            "409": 502
+          }
+        },
+        "consultar": {
+          "solicitudes": 1680,
+          "rps": 82.6,
+          "promedioMs": 187.85,
+          "medianaMs": 193.15,
+          "p95Ms": 229.36,
+          "p99Ms": 272.22,
+          "maxMs": 299.5,
+          "estados": {
+            "200": 1680
+          }
+        },
+        "cancelar": {
+          "solicitudes": 1680,
+          "rps": 82.5,
+          "promedioMs": 188.61,
+          "medianaMs": 194.07,
+          "p95Ms": 229.33,
+          "p99Ms": 281.86,
+          "maxMs": 302.5,
+          "estados": {
+            "200": 1680
+          }
+        },
+        "config": {
+          "solicitudes": 1457,
+          "rps": 72.2,
+          "promedioMs": 188.21,
+          "medianaMs": 192.9,
+          "p95Ms": 227.05,
+          "p99Ms": 281.71,
+          "maxMs": 316.5,
+          "estados": {
+            "200": 1457
+          }
+        },
+        "mes": {
+          "solicitudes": 2994,
+          "rps": 148.3,
+          "promedioMs": 190.84,
+          "medianaMs": 194.57,
+          "p95Ms": 231.04,
+          "p99Ms": 279.4,
+          "maxMs": 301.7,
+          "estados": {
+            "200": 2994
+          }
+        }
+      }
+    },
+    {
+      "usuariosVirtuales": 400,
+      "solicitudes": 20698,
+      "rps": 998.2,
+      "promedioMs": 372.61,
+      "medianaMs": 384.74,
+      "p95Ms": 443.81,
+      "p99Ms": 482.71,
+      "maxMs": 1298.5,
+      "estados": {
+        "200": 18513,
+        "201": 1308,
+        "409": 877
+      },
+      "servidor": {
+        "n": 21,
+        "rssMB": {
+          "inicio": 174.29,
+          "fin": 175.04,
+          "max": 175.14
+        },
+        "heapMB": {
+          "max": 94.78
+        },
+        "cpuServerNucleoPct": {
+          "avg": 93.21,
+          "max": 109.35
+        },
+        "cpuMaquinaPct": {
+          "avg": 18.26,
+          "max": 27.2
+        },
+        "bucleP99ms": {
+          "max": 143.52
+        },
+        "bucleMaxMs": 201.59,
+        "enCursoMax": 1
+      },
+      "porSolicitud": {
+        "disponibilidad_dia": {
+          "solicitudes": 11099,
+          "rps": 544.6,
+          "promedioMs": 371.62,
+          "medianaMs": 384,
+          "p95Ms": 442.44,
+          "p99Ms": 480.34,
+          "maxMs": 1292.8,
+          "estados": {
+            "200": 11099
+          }
+        },
+        "mes": {
+          "solicitudes": 3243,
+          "rps": 159.2,
+          "promedioMs": 372.65,
+          "medianaMs": 385.58,
+          "p95Ms": 444.11,
+          "p99Ms": 478.08,
+          "maxMs": 1289.8,
+          "estados": {
+            "200": 3243
+          }
+        },
+        "config": {
+          "solicitudes": 1555,
+          "rps": 76.5,
+          "promedioMs": 373.31,
+          "medianaMs": 383.81,
+          "p95Ms": 444.52,
+          "p99Ms": 494.7,
+          "maxMs": 1254.2,
+          "estados": {
+            "200": 1555
+          }
+        },
+        "reservar": {
+          "solicitudes": 2185,
+          "rps": 106.4,
+          "promedioMs": 378.92,
+          "medianaMs": 387.25,
+          "p95Ms": 444.99,
+          "p99Ms": 496.72,
+          "maxMs": 1253.6,
+          "estados": {
+            "201": 1308,
+            "409": 877
+          }
+        },
+        "consultar": {
+          "solicitudes": 1308,
+          "rps": 63.5,
+          "promedioMs": 373.6,
+          "medianaMs": 383.34,
+          "p95Ms": 447.78,
+          "p99Ms": 694.54,
+          "maxMs": 1298.5,
+          "estados": {
+            "200": 1308
+          }
+        },
+        "cancelar": {
+          "solicitudes": 1308,
+          "rps": 63.4,
+          "promedioMs": 368.52,
+          "medianaMs": 386.45,
+          "p95Ms": 446.38,
+          "p99Ms": 490.69,
+          "maxMs": 1177.1,
+          "estados": {
+            "200": 1308
+          }
+        }
+      }
+    },
+    {
+      "usuariosVirtuales": 800,
+      "solicitudes": 26113,
+      "rps": 1242,
+      "promedioMs": 594.14,
+      "medianaMs": 650.14,
+      "p95Ms": 720.98,
+      "p99Ms": 1217.69,
+      "maxMs": 3949.8,
+      "estados": {
+        "200": 22470,
+        "201": 862,
+        "409": 1216,
+        "error:ECONNREFUSED": 1565
+      },
+      "servidor": {
+        "n": 21,
+        "rssMB": {
+          "inicio": 175.98,
+          "fin": 189.13,
+          "max": 189.27
+        },
+        "heapMB": {
+          "max": 102.71
+        },
+        "cpuServerNucleoPct": {
+          "avg": 93.09,
+          "max": 106.04
+        },
+        "cpuMaquinaPct": {
+          "avg": 14.74,
+          "max": 21.8
+        },
+        "bucleP99ms": {
+          "max": 143.52
+        },
+        "bucleMaxMs": 245.89,
+        "enCursoMax": 1
+      },
+      "porSolicitud": {
+        "config": {
+          "solicitudes": 2236,
+          "rps": 108.5,
+          "promedioMs": 587.14,
+          "medianaMs": 648.5,
+          "p95Ms": 716.28,
+          "p99Ms": 1236.38,
+          "maxMs": 3949.4,
+          "estados": {
+            "200": 2074,
+            "error:ECONNREFUSED": 162
+          }
+        },
+        "disponibilidad_dia": {
+          "solicitudes": 15580,
+          "rps": 755.1,
+          "promedioMs": 597.22,
+          "medianaMs": 650.2,
+          "p95Ms": 720.79,
+          "p99Ms": 1237.18,
+          "maxMs": 3949,
+          "estados": {
+            "200": 14642,
+            "error:ECONNREFUSED": 938
+          }
+        },
+        "mes": {
+          "solicitudes": 4395,
+          "rps": 213.1,
+          "promedioMs": 590.23,
+          "medianaMs": 649.79,
+          "p95Ms": 722.08,
+          "p99Ms": 1155.81,
+          "maxMs": 3949.4,
+          "estados": {
+            "200": 4110,
+            "error:ECONNREFUSED": 285
+          }
+        },
+        "reservar": {
+          "solicitudes": 2178,
+          "rps": 104.5,
+          "promedioMs": 598.76,
+          "medianaMs": 653.16,
+          "p95Ms": 721.86,
+          "p99Ms": 1214.77,
+          "maxMs": 3949.8,
+          "estados": {
+            "201": 862,
+            "409": 1216,
+            "error:ECONNREFUSED": 100
+          }
+        },
+        "consultar": {
+          "solicitudes": 862,
+          "rps": 41.3,
+          "promedioMs": 581.09,
+          "medianaMs": 650.82,
+          "p95Ms": 722.72,
+          "p99Ms": 1142.03,
+          "maxMs": 3659.6,
+          "estados": {
+            "200": 820,
+            "error:ECONNREFUSED": 42
+          }
+        },
+        "cancelar": {
+          "solicitudes": 862,
+          "rps": 41.3,
+          "promedioMs": 577.95,
+          "medianaMs": 643.41,
+          "p95Ms": 724.79,
+          "p99Ms": 1146.4,
+          "maxMs": 3418.5,
+          "estados": {
+            "200": 824,
+            "error:ECONNREFUSED": 38
+          }
+        }
+      }
+    },
+    {
+      "usuariosVirtuales": 1000,
+      "solicitudes": 27330,
+      "rps": 1290.1,
+      "promedioMs": 712.22,
+      "medianaMs": 787.41,
+      "p95Ms": 895.77,
+      "p99Ms": 1453.15,
+      "maxMs": 5479.9,
+      "estados": {
+        "200": 23769,
+        "201": 559,
+        "409": 1049,
+        "error:ECONNREFUSED": 1953
+      },
+      "servidor": {
+        "n": 21,
+        "rssMB": {
+          "inicio": 190.5,
+          "fin": 196.14,
+          "max": 196.14
+        },
+        "heapMB": {
+          "max": 99.94
+        },
+        "cpuServerNucleoPct": {
+          "avg": 94.16,
+          "max": 109.07
+        },
+        "cpuMaquinaPct": {
+          "avg": 17.44,
+          "max": 25.1
+        },
+        "bucleP99ms": {
+          "max": 144.83
+        },
+        "bucleMaxMs": 245.89,
+        "enCursoMax": 1
+      },
+      "porSolicitud": {
+        "disponibilidad_dia": {
+          "solicitudes": 17125,
+          "rps": 823.1,
+          "promedioMs": 711.28,
+          "medianaMs": 786.8,
+          "p95Ms": 895.72,
+          "p99Ms": 1454.64,
+          "maxMs": 5479.3,
+          "estados": {
+            "200": 15849,
+            "error:ECONNREFUSED": 1276
+          }
+        },
+        "mes": {
+          "solicitudes": 4914,
+          "rps": 236.3,
+          "promedioMs": 707.38,
+          "medianaMs": 787.91,
+          "p95Ms": 890.56,
+          "p99Ms": 1417.49,
+          "maxMs": 5474.6,
+          "estados": {
+            "200": 4544,
+            "error:ECONNREFUSED": 370
+          }
+        },
+        "reservar": {
+          "solicitudes": 1691,
+          "rps": 80.5,
+          "promedioMs": 733.47,
+          "medianaMs": 792.61,
+          "p95Ms": 910.06,
+          "p99Ms": 1446.94,
+          "maxMs": 5479.9,
+          "estados": {
+            "201": 559,
+            "409": 1049,
+            "error:ECONNREFUSED": 83
+          }
+        },
+        "config": {
+          "solicitudes": 2482,
+          "rps": 119.6,
+          "promedioMs": 719.51,
+          "medianaMs": 787.42,
+          "p95Ms": 902.19,
+          "p99Ms": 1585.01,
+          "maxMs": 4537.5,
+          "estados": {
+            "200": 2319,
+            "error:ECONNREFUSED": 163
+          }
+        },
+        "consultar": {
+          "solicitudes": 559,
+          "rps": 26.5,
+          "promedioMs": 706.51,
+          "medianaMs": 784.09,
+          "p95Ms": 906.57,
+          "p99Ms": 3438.69,
+          "maxMs": 4627.3,
+          "estados": {
+            "200": 530,
+            "error:ECONNREFUSED": 29
+          }
+        },
+        "cancelar": {
+          "solicitudes": 559,
+          "rps": 26.5,
+          "promedioMs": 692.71,
+          "medianaMs": 783.77,
+          "p95Ms": 897.54,
+          "p99Ms": 3786.33,
+          "maxMs": 4628.6,
+          "estados": {
+            "200": 527,
+            "error:ECONNREFUSED": 32
+          }
+        }
+      }
+    }
+  ],
+  "baseDeDatos": {
+    "conexiones": 1,
+    "motor": "SQLite (en proceso, una conexión)",
+    "transaccionesOk": 24518,
+    "transaccionesFallidas": 4120,
+    "transaccionMs": {
+      "n": 28638,
+      "avg": 1.76,
+      "p50": 1.44,
+      "p95": 2.71,
+      "p99": 13.68,
+      "max": 38.34
+    },
+    "esperaDeCandadoMs": {
+      "n": 28638,
+      "avg": 0.01,
+      "p50": 0.01,
+      "p95": 0.02,
+      "p99": 0.04,
+      "max": 0.32
+    }
+  },
+  "registros": {
+    "lines": 77680,
+    "errors": 0,
+    "warns": 4123
+  },
+  "consistencia": {
+    "reservas": 12294,
+    "confirmadas": 70,
+    "canceladas": 12224,
+    "casilleros": 336,
+    "casillerosHuerfanos": 0,
+    "confirmadasConBloqueIncoherente": 0,
+    "solapamientos": 0,
+    "codigosDuplicados": 0,
+    "clientes": 12294,
+    "integridadSqlite": "ok",
+    "tamanoMB": 69.24
+  }
+}

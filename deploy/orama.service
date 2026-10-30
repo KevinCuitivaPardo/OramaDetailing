@@ -1,0 +1,24 @@
+# Servicio systemd para un VPS (Ubuntu/Debian). Copiar a /etc/systemd/system/orama.service
+# Las variables van en /etc/orama/orama.env (chmod 600, propietario root): NO dentro del repositorio.
+[Unit]
+Description=Orama's Detailing (API + sitio)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=orama
+WorkingDirectory=/opt/orama
+EnvironmentFile=/etc/orama/orama.env
+ExecStart=/usr/bin/node --no-warnings server/index.js
+Restart=always
+RestartSec=3
+# Endurecimiento
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/lib/orama
+LimitNOFILE=65536
+
+[Install]
+WantedBy=multi-user.target

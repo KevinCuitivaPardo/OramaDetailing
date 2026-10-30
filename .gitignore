@@ -1,0 +1,13 @@
+node_modules
+dist
+_old
+.DS_Store
+Homepage
+.env
+.env.*
+!.env.example
+data/*.db
+data/*.db-*
+.tmp
+.claude/
+data/backups/

@@ -1,0 +1,32 @@
+<section class="section surface-black" id="galeria">
+  <div class="container-page">
+    <div class="sec-head rev">
+      <span class="eyebrow">Trabajos reales</span>
+      <h2 class="section-title">Galería</h2>
+      <p class="lead">Camionetas, SUV, carros y motos que han pasado por nuestras manos. Toca una foto para verla en grande.</p>
+    </div>
+
+    <div class="gallery rev" id="gallery"></div>
+
+    <!-- Comparador antes/después: se muestra solo cuando se configuran las fotos en modules/compare.js -->
+    <div id="baWrap" hidden class="mt-16">
+      <h3 class="mb-6 text-[2rem]">Antes y después</h3>
+      <div class="ba" id="ba">
+        <div class="ba-img before" id="baB"><div><div class="ph">Antes</div></div></div>
+        <div class="ba-img after" id="baA"><div><div class="ph">Después</div></div></div>
+        <span class="tag l">Antes</span><span class="tag r">Después</span>
+        <div class="ba-line"></div>
+        <div class="ba-knob"><svg viewBox="0 0 24 24"><path d="M9 6l-6 6 6 6M15 6l6 6-6 6"/></svg></div>
+        <input type="range" min="0" max="100" value="50" id="baR" aria-label="Comparar antes y después">
+      </div>
+    </div>
+  </div>
+
+  <dialog class="lightbox" id="lightbox" aria-label="Foto ampliada">
+    <button class="lb-close" id="lbClose" aria-label="Cerrar">×</button>
+    <button class="lb-nav lb-prev" id="lbPrev" aria-label="Foto anterior">‹</button>
+    <img id="lbImg" alt="">
+    <button class="lb-nav lb-next" id="lbNext" aria-label="Foto siguiente">›</button>
+    <p class="lb-cap" id="lbCap"></p>
+  </dialog>
+</section>

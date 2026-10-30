@@ -1,0 +1,14 @@
+@layer components {
+  .ba { @apply relative mx-auto max-w-[900px] overflow-hidden select-none; aspect-ratio: 4 / 3; border-radius: var(--r-xl); background: #111; touch-action: pan-y; --pos: 50%; }
+  .ba-img { @apply absolute inset-0 grid place-items-center text-center bg-cover bg-center text-white; }
+  .ba-img.before { background: linear-gradient(135deg, #2b2b2f, #3a3a3f); }
+  .ba-img.after { background: linear-gradient(135deg, #0b0b0c, #1d1d20); clip-path: inset(0 0 0 var(--pos)); }
+  .ba-img .ph { @apply text-[clamp(1.6rem,6vw,2.4rem)]; font-weight: 600; letter-spacing: -.03em; }
+  .tag { @apply absolute top-4 z-[2] px-3.5 py-1.5 text-[.78rem] uppercase text-white; letter-spacing: .12em; background: rgb(0 0 0 / .6); border-radius: 999px; }
+  .tag.l { left: 16px; }
+  .tag.r { right: 16px; background: var(--color-orama); }
+  .ba-line { @apply absolute top-0 bottom-0 z-[3] w-0.5 -ml-px bg-white pointer-events-none; left: var(--pos); }
+  .ba-knob { @apply absolute top-1/2 z-[4] grid place-items-center w-12 h-12 -mt-6 -ml-6 rounded-full! pointer-events-none bg-white; left: var(--pos); box-shadow: var(--shadow-md); }
+  .ba-knob svg { @apply w-6 h-6 fill-none; stroke: #0f0f11; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+  .ba input { @apply absolute inset-0 z-[5] w-full h-full m-0 opacity-0 cursor-ew-resize; }
+}

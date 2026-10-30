@@ -1,0 +1,12 @@
+@layer components {
+  details { border-bottom: 1px solid var(--line); }
+  details:first-child { border-top: 1px solid var(--line); }
+  summary { @apply flex items-center justify-between gap-4 min-h-[76px] py-4 cursor-pointer list-none; font-size: clamp(1.15rem, 2.2vw, 1.45rem); font-weight: 500; letter-spacing: -.025em; transition: color .2s; }
+  summary:hover { color: var(--color-orama); }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: ""; @apply shrink-0 w-7 h-7; border-radius: 50%; background: linear-gradient(currentColor, currentColor) center / 12px 1.5px no-repeat, linear-gradient(currentColor, currentColor) center / 1.5px 12px no-repeat; border: 1px solid var(--line); transition: transform .45s var(--ease), border-color .25s; }
+  details[open] summary::after { transform: rotate(135deg); border-color: var(--color-orama); }
+  details p { @apply pb-5 max-w-[62ch]; color: var(--muted); animation: faq-in .5s var(--ease); }
+  details p + p { @apply -mt-2; }
+  @keyframes faq-in { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: none; } }
+}
