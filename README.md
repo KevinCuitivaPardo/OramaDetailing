@@ -72,10 +72,3 @@ Modelo 3D del carro: “Car Concept” de Eric Chadwick / Darmstadt Graphics Gro
 - Se agenda desde el día siguiente; la agenda se cierra de 11:00 p.m. a 6:00 a.m.
 - Cambiar o cancelar hasta 1 hora antes.
 
-## Pendientes
-
-- **Configuración manual** (nada se inventa): `GMAIL_USER` + `GMAIL_APP_PASSWORD`, `OWNER_EMAIL`, `DATA_ENCRYPTION_KEY`,
-  `PUBLIC_BASE_URL` (https) y `ADMIN_TOKEN_SECRET`. Ver [docs/OPERACION.md](docs/OPERACION.md).
-- **Antes y después:** el comparador está oculto hasta que pongas dos fotos en `modules/compare.js` (`PHOTOS`).
-- **Más fotos:** agrega los .webp a `public/fotos/` y súmalos en `partials/galeria.html` y `modules/gallery.js`.
-- **Logo:** reemplazar el texto del logo por el SVG/PNG en alta calidad.
